@@ -39,4 +39,20 @@ app.get("/todos", async (req, res) => {
     })
 })
 
+app.post("/delete-todo", async (req, res) => {
+    const id = req.body.id;
+    try {
+        const status = await todo.findByIdAndDelete({
+            _id: id
+        })
+        if (!status) {
+            res.json({ error: "No todo found" })
+        }
+        res.json({ msg: "Todo deteted successfully" })
+
+    } catch (err) {
+        res.json({ error: "Couldnt delete, server issue" })
+    }
+})
+
 app.listen(port, () => console.log("Server is up on port " + port));
