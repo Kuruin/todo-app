@@ -2,12 +2,20 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const { todo, connectDB } = require('./db/db')
+const { todoFormat } = require('./types')
 
 connectDB();
 app.use(express.json());
 
 app.post("/add-todo", async (req, res) => {
-    const { name, description } = req.body;
+    const payload = req.body;
+    const { name, description } = payload;
+    const validTodo = todoFormat.safeParse(payload);
+
+    if (!validTodo.success) {
+        res.status(404).json({ error: "Name and description must be string" });
+        return
+    }
     try {
         if (!name || !description) {
             res.json({ msg: "Name and description is required" })
@@ -33,10 +41,14 @@ app.post("/add-todo", async (req, res) => {
 })
 
 app.get("/todos", async (req, res) => {
-    const Todos = await todo.find({})
-    res.json({
-        Todos
-    })
+    try {
+        const Todos = await todo.find({})
+        res.json({
+            Todos
+        })
+    } catch (err) {
+        res.json({ error: "Cant fetch the todos, server busy!" })
+    }
 })
 
 app.post("/delete-todo", async (req, res) => {
