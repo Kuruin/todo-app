@@ -31,4 +31,12 @@ app.post("/add-todo", async (req, res) => {
         res.json({ error: "Server side error" })
     }
 })
+
+app.get("/todos", async (req, res) => {
+    const Todos = await todo.find({})
+    res.json({
+        Todos
+    })
+})
+
 app.listen(port, () => console.log("Server is up on port " + port));
