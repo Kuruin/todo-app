@@ -67,4 +67,8 @@ app.post("/delete-todo", async (req, res) => {
     }
 })
 
+app.use((err, req, res, next) => {
+    res.json({ msg: "Something is up with our server" })
+})
+
 app.listen(port, () => console.log("Server is up on port " + port));
