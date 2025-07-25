@@ -4,7 +4,7 @@ const connectDB = async () => {
     await mongoose.connect('mongodb+srv://ce23manavjitsinghtanda:HXtzXfdjNhuB8mvL@cluster0.rqfcx.mongodb.net/public_todo_app?retryWrites=true&w=majority&appName=Cluster0');
     console.log('Mongooese database connected');
 }
-const todoSchema = mongoose.Schema({
+const todoSchema = new mongoose.Schema({
     name: String,
     description: String
 });
