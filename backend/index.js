@@ -3,9 +3,11 @@ const app = express();
 const port = 3000;
 const { todo, connectDB } = require('./db/db')
 const { todoFormat } = require('./types')
+const cors = require('cors')
 
 connectDB();
 app.use(express.json());
+app.use(cors());
 
 app.post("/add-todo", async (req, res) => {
     const payload = req.body;
