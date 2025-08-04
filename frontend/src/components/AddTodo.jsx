@@ -22,7 +22,7 @@ export const AddTodo = ()=>{
         <>
             <input ref={divRef} onChange={(e)=> setTitle(e.target.value)} type="text" placeholder="Enter your title"></input><br/>
             <input onChange={(e)=> setDescription(e.target.value)}type="text" placeholder="Enter your description"></input><br/>
-            <button onClick={addTodo}>Add Todo</button>
+            <button onClick={addTodo}>Add Todo</button><br/>
         </>
     )
 }
