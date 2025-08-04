@@ -4,11 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { GetTodo } from './components/GetTodo'
 import { AddTodo } from './components/AddTodo'
+import { DeleteTodo } from './components/DeleteTodo'
 
 function App() {
   return (
     <div>
-      <AddTodo/>
+      <AddTodo/><br/>
+      <DeleteTodo/> 
       <GetTodo/>
     </div>
   )
