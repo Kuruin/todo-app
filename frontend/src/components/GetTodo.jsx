@@ -14,7 +14,7 @@ export const GetTodo =() =>{
     },[])
 
     return (
-        <div>
+        <div >
            <Todos todo={todos}/>
         </div>
     )
