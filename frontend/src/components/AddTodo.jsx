@@ -23,10 +23,10 @@ export const AddTodo = ()=>{
 
 
     return (
-        <div className='flex flex-col h-screen place-items-center justify-center'>
-            <input className="border rounded-md justify-items-center p-1 m-1" ref={divRef} onChange={(e)=> setTitle(e.target.value)} type="text" placeholder="Enter your title"></input>
-            <input className="border rounded-md justify-items-center p-1 m-1" onChange={(e)=> setDescription(e.target.value)}type="text" placeholder="Enter your description"></input>
-            <button className="border rounded-lg p-2 mt-3 mr-26 hover:bg-blue-300" onClick={addTodo}>Add Todo</button>
+        <div className='flex flex-col place-items-center justify-center h-screen'>
+            <input className="border rounded-md px-3 py-1 m-1 text-wrap shadow-xl/20 w-70" ref={divRef} onChange={(e)=> setTitle(e.target.value)} type="text" placeholder="Title... "></input>
+            <input className="border rounded-md px-3 py-1 m-1 text-wrap shadow-xl/20 w-70" onChange={(e)=> setDescription(e.target.value)}type="text" placeholder="Description..."></input>
+            <button className="border rounded-[50px] p-2 mt-3 mr-35 hover:bg-blue-300 w-35" onClick={addTodo}>Add Todo</button>
         </div>
     )
 }

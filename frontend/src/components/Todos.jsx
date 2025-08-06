@@ -5,11 +5,11 @@ export const Todos = ({todo}) =>{
         {todo.map((todo)=>{ 
             id++
             return (
-                <div key={id} id={id}>
-                <p>Id:-{todo._id}</p>
-                <h1>Title:- {todo.name}</h1>
+                <div key={id} id={id} className="flex flex-col place-items-center justify-center py-3">
+                <p className="font-bold">Id:-{todo._id}</p>
+                <h1 className="font-semibold">Title:- {todo.name}</h1>
                 <h3>Descripiton:-{todo.description}</h3>
-                <button>Mark as completed</button>
+                <button className="border rounded-lg px-2 py-1 hover:bg-green-400">Mark as completed</button>
                 </div>
             )
         })}

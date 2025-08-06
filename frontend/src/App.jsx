@@ -9,9 +9,11 @@ import { DeleteTodo } from './components/DeleteTodo'
 function App() {
   return (
     <div>
-      <AddTodo/><br/>
-      <DeleteTodo/> 
-      <GetTodo/>
+        <div className='flex justify-evenly place-items-center sm:flex-row flex-col'>
+        <AddTodo/>
+        <DeleteTodo/>
+        </div>
+        <GetTodo/>
     </div>
   )
 }

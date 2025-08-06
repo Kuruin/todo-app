@@ -14,7 +14,7 @@ export const GetTodo =() =>{
     },[])
 
     return (
-        <div >
+        <div className='flex flex-col'>
            <Todos todo={todos}/>
         </div>
     )

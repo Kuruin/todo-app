@@ -11,10 +11,10 @@ export const DeleteTodo = () =>{
         (response.data.msg ? alert("Todo deleted"): alert("Todo dosent exists"))
     }
     return(
-        <>
-        <input onChange={(e) => setId(e.target.value)} type="text" placeholder="Enter ID"></input><br/>
-        <button onClick={todoDeletion}>Delete Todo</button>
-        </>
+        <div className="flex flex-col place-items-center">
+        <input className="border justify-center w-75 px-3 py-1 rounded-2xl mb-5" onChange={(e) => setId(e.target.value)} type="text" placeholder="Enter ID"></input>
+        <button className="border-hidden bg-red-300 hover:bg-red-500 hover:font-[550] rounded-md px-2 py-2" onClick={todoDeletion}>Delete Todo</button>
+        </div>
     )
 
 }
