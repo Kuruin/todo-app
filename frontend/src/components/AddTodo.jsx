@@ -9,7 +9,7 @@ export const AddTodo = ()=>{
     useEffect(()=> divRef.current.focus(),[]);
     
     async function addTodo(){
-        if(title == '' && description == ''){
+        if(!title || !description){
             alert("Name and description is required!")
             return
         }
