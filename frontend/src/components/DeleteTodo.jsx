@@ -12,7 +12,7 @@ export const DeleteTodo = () =>{
     }
     return(
         <div className="flex flex-col place-items-center">
-        <input className="border justify-center w-75 px-3 py-1 rounded-2xl mb-5" onChange={(e) => setId(e.target.value)} type="text" placeholder="Enter ID"></input>
+        <input className="border justify-center w-72 px-3 py-1 rounded-2xl mb-5" onChange={(e) => setId(e.target.value)} type="text" placeholder="Enter ID"></input>
         <button className="border-hidden bg-red-300 hover:bg-red-500 hover:font-[550] hover:text-white rounded-md px-2 py-2" onClick={todoDeletion}>Delete Todo</button>
         </div>
     )
