@@ -9,7 +9,7 @@ export const Todos = ({todo}) =>{
                 <p className="font-bold">Id:-{todo._id}</p>
                 <h1 className="font-semibold">Title:- {todo.name}</h1>
                 <h3>Descripiton:-{todo.description}</h3>
-                <button className="border rounded-lg px-2 py-1 hover:bg-green-400">Mark as completed</button>
+                <button className="border rounded-lg px-2 py-1 hover:bg-green-600 hover:text-white hover:font-bold">Mark as completed</button>
                 </div>
             )
         })}
