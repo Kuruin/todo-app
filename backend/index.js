@@ -4,6 +4,7 @@ const port = 3000;
 const { todo, connectDB } = require('./db/db')
 const { todoFormat } = require('./types')
 const cors = require('cors')
+const quotes = require('./quotes');
 
 connectDB();
 app.use(express.json());
@@ -68,6 +69,13 @@ app.post("/delete-todo", async (req, res) => {
         res.json({ error: "Couldnt delete, server issue" })
     }
 })
+
+app.get("/quotes", async (req, res) => {
+    const random = parseInt(Math.random() * 10);
+    let quote = quotes[random].q;
+    res.json({ quote })
+})
+
 
 app.use((err, req, res, next) => {
     res.json({ msg: "Something is up with our server" })
