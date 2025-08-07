@@ -11,11 +11,17 @@ function App() {
   return (
     <div>
         <Quotes/>
-        <div className='flex justify-evenly place-items-center sm:flex-row flex-col h-50'>
-        <AddTodo/>
+        <div className='flex justify-evenly place-items-center h-55'>
+          <div>
+            <div className='mb-15  pt-50'>
+              <AddTodo/>
+            </div>
         <DeleteTodo/>
+          </div>
+          <div className='mt-60'>
+          <GetTodo/>  
+          </div>
         </div>
-        <GetTodo/>
     </div>
   )
 }

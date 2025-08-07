@@ -14,7 +14,7 @@ export const GetTodo =() =>{
     },[])
 
     return (
-        <div className='flex flex-col'>
+        <div className='grid grid-cols-3 gap-6'>
            <Todos todo={todos}/>
         </div>
     )
