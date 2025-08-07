@@ -5,10 +5,12 @@ import './App.css'
 import { GetTodo } from './components/GetTodo'
 import { AddTodo } from './components/AddTodo'
 import { DeleteTodo } from './components/DeleteTodo'
+import { Quotes } from './components/Quotes'
 
 function App() {
   return (
     <div>
+        <Quotes/>
         <div className='flex justify-evenly place-items-center sm:flex-row flex-col'>
         <AddTodo/>
         <DeleteTodo/>
