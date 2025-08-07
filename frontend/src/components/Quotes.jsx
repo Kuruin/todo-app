@@ -15,8 +15,8 @@ export const Quotes = ()=>{
     },[])
 
     return(
-        <div className="flex justify-center">
-            <p className="font-bold text-3xl">{quote}</p>
+        <div className="flex justify-center h-50 place-items-center">
+            <p className="font-semibold text-3xl font-sans hover:font-bold hover:text-shadow-lg">{quote}</p>
         </div>
     )
 }   

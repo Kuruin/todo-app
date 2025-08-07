@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
         <Quotes/>
-        <div className='flex justify-evenly place-items-center sm:flex-row flex-col'>
+        <div className='flex justify-evenly place-items-center sm:flex-row flex-col h-50'>
         <AddTodo/>
         <DeleteTodo/>
         </div>
