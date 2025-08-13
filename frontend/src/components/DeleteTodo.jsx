@@ -7,7 +7,6 @@ export const DeleteTodo = () =>{
     
     async function todoDeletion(){
         const response = await axios.post("http://localhost:3000/delete-todo",{id});
-        console.log(id);
         (response.data.msg ? alert("Todo deleted"): alert("Todo dosent exists"))
     }
     return(

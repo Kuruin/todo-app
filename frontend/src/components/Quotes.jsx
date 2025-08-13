@@ -8,7 +8,7 @@ export const Quotes = ()=>{
         const getQuotes = async ()=> {
             const response = await axios.get("http://localhost:3000/quotes");
             setQuote(response.data.quote)
-            console.log("hehe")
+            
         }
         getQuotes();
         setInterval(()=> getQuotes(),6000)

@@ -18,7 +18,7 @@ export const AddTodo = ()=>{
             description
         });
         (response.data.msg ? alert("Todo added successfully") : alert("Todo already exists!"))
-        console.log(response)
+        
     }
 
 
